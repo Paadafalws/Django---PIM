@@ -3,12 +3,23 @@
 
 <body>
 
-<h1>{{ mymember.firstname }} {{ mymember.lastname }}</h1>
-  
-<p>Phone: {{ mymember.id }}</p>
-<p>Member since: {{ mymember.id }}</p>
 
-<p>Back to <a href="/members">Mermbers</a></p>
+    {% block content %}
+      <h2>Login</h2>
+      <form method="post">
+        {% csrf_token %}
+        <div>
+          <label for="id_username">Usuário:</label>
+          <input type="text" name="username" id="id_username" required>
+        </div>
+        <div>
+          <label for="id_password">Senha:</label>
+          <input type="password" name="password" id="id_password" required>
+        </div>
+        <button type="submit">Entrar</button>
+      </form>
+    {% endblock %}
+    
 
 </body>
 </html>
