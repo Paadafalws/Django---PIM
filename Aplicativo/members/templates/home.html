@@ -1,23 +1,50 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
 
-<html>
-  <head>
-    {% load static %} <!-- Precisa desse dai para carregar as paginas do python-->
-    <title>Meu Site</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-  </head>
-  <body>
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Sobre</a></li>
-        <li><a href="#">Contato</a></li>
-      </ul>
-    </nav>
-    <div class="conteudo">
-      {% block conteudo %}
-      {% endblock %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static './style.css' %}">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/Formulario2.css">
+</head>
+<body class="login"> 
+    <!--LOGO-->   
+    <div class="logo">
+        <!--colocar imagem do coa -->
+        <img src="{% static './img/image.png' %}" width="550rem">
     </div>
-    <script src="{% static 'js/main.js' %}"></script>
-  </body>
+    <!--FIM LOGO-->
+    <!--FORMULARIO-->
+    <main class="main" >
+        <header class="header">            
+            <h1>Login</h1>
+        </header>
+        <section>
+            <form class="form">
+                <div class="floatingInput">          
+                    <input type="email" id="login" class="floatingInput__control" placeholder="login" >
+                    <label for="login" class="floatingInput__label">Login</label>         
+                </div>
+                <div class="floatingInput">
+                    <input id="password" type="password" class="floatingInput__control" placeholder="senha">
+                    <label for="password" class="floatingInput__label">Senha</label> 
+                </div>
+                <div class="form-btn">
+                    <a href="Paginaprincipal.html"><button type="submit" class="btn">login</button></a>         
+                </div>
+            </form>
+            <div class="checkbox">
+                <div class="checkbox1" >
+                    <input type="checkbox" id="checkbox1" class="" >
+                    <label for="checkbox1" class="">Lembrar Usuario</label>           
+                </div>                
+                <a href="" class="esquecisenha">Esqueci minha senha</a>                                                                                        
+            </div>                   
+        </section>
+    </main>  
+    <!--FIM FORMULARIO--> 
+</body>
 </html>
