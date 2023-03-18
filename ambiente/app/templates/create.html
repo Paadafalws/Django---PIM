@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+        
+{% block content %}
+    <h1>Create User</h1>
+    <form method="POST">
+        {{ form.csrf_token }}
+        {{ form.name.label }} {{ form.name() }}<br>
+    </from>
+{% endblock %}
