@@ -1,5 +1,8 @@
 {
     "python.analysis.extraPaths": [
         "./Flash/aplicativo/models"
-    ]
+    ],
+    "editor.formatOnSaveMode": "file",
+    "editor.formatOnSave": false,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
 }
